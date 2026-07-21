@@ -99,8 +99,7 @@ st.markdown("""
 @st.cache_resource
 def load_model():
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-    # Matches exact filename from model artifact
-    model_path = os.path.join(BASE_DIR, 'houes_price_LR.pkl')[cite: 1]
+    model_path = os.path.join(BASE_DIR, 'houes_price_LR.pkl')
     
     with open(model_path, 'rb') as file:
         model = pickle.load(file)
