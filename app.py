@@ -175,7 +175,7 @@ st.markdown("""
 @st.cache_resource
 def load_model():
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-    model_path = os.path.join(BASE_DIR, 'houes_price_LR.pkl')[cite: 1]
+    model_path = os.path.join(BASE_DIR, 'houes_price_LR.pkl')
     
     with open(model_path, 'rb') as file:
         model = pickle.load(file)
@@ -192,8 +192,8 @@ except Exception as e:
 # ---------------------------------------------------------
 st.markdown("""
     <div class="hero-container">
-        <span class="badge">✨ AI POWERED PREDICTIVE ANALYTICS</span>
-        <h1 class="hero-title">House Price Prediction LR Model</h1>
+        <span class="badge">✨ HOUSE PRICE PREDICTIVE ANALYTICS</span>
+        <h1 class="hero-title">Predict House Prices</h1>
         <p class="hero-subtitle">Get accurate property valuations using machine learning and real estate market insights.</p>
     </div>
 """, unsafe_allow_html=True)
@@ -269,7 +269,7 @@ with st.form("prediction_form"):
         airport_dist = st.number_input("Airport Distance (km)", min_value=0.0, max_value=100.0, value=15.0, step=0.5)
 
     st.markdown("<br>", unsafe_allow_html=True)
-    submit_button = st.form_submit_button(label="✨ Predict Property Value")
+    submit_button = st.form_submit_button(label="✨ Predict Property Value ✨")
 
 # ---------------------------------------------------------
 # Prediction Execution & Results Output
@@ -294,8 +294,7 @@ if submit_button:
             </div>
         """, unsafe_allow_html=True)
 
-        # Feature Importance Insights Chart
-        st.markdown("### 📊 Market Insights & Model Weights")
+        st.markdown("### 📊 Market Insights & Feature Impact")
         feature_names = [
             'Bedrooms', 'Bathrooms', 'Living Area', 'Lot Area', 'Floors',
             'Waterfront', 'Views', 'Condition', 'Grade', 'Above Area',
