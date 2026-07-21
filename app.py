@@ -84,7 +84,7 @@ st.markdown("""
 # Load the trained model
 @st.cache_resource
 def load_model():
-    with open('house_price_LR.pkl', 'rb') as file:
+    with open('houes_price_LR.pkl', 'rb') as file:
         model = pickle.load(file)
     return model
 
